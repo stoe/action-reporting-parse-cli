@@ -1,12 +1,13 @@
 {
   "name": "@stoe/action-reporting-parse-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
-  "description": "CLI to report on GitHub Actions",
+  "description": "CLI to parse https://github.com/stoe/action-reporting-cli reports",
   "keywords": [
     "github-actions",
     "reporting",
-    "cli"
+    "cli",
+    "parse"
   ],
   "author": {
     "name": "Stefan Stölzle",

@@ -2,7 +2,7 @@
 
 [![Test](https://github.com/stoe/action-reporting-parse-cli/actions/workflows/test.yml/badge.svg)](https://github.com/stoe/action-reporting-parse-cli/actions/workflows/test.yml) [![CodeQL](https://github.com/stoe/action-reporting-parse-cli/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/stoe/action-reporting-parse-cli/actions/workflows/github-code-scanning/codeql) [![Publish](https://github.com/stoe/action-reporting-parse-cli/actions/workflows/publish.yml/badge.svg)](https://github.com/stoe/action-reporting-parse-cli/actions/workflows/publish.yml) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-> CLI to report on GitHub Actions
+> CLI to parse https://github.com/stoe/action-reporting-cli reports
 
 ## Usage example
 
