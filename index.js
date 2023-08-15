@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
 import fs from 'fs'
+import {join} from 'path'
+
 import chalk from 'chalk'
 import meow from 'meow'
 import open from 'open'
 import yaml from 'js-yaml'
 
-const {blue, bold, red, yellow} = chalk
+const {dim, blue, bold, red, yellow} = chalk
 const cli = meow(
   `
   ${bold('Usage')}
@@ -14,14 +16,16 @@ const cli = meow(
 
   ${bold('Required options')}
     ${yellow(`--config`)}, ${yellow(`-c`)}      Path to config.yml file.
-    ${yellow(`--data`)}, ${yellow(`-d`)}        Path to data directory.
+    ${yellow(`--data`)}, ${yellow(`-d`)}        Path to data directory to lookup ${dim('*actions.json')} files in.
 
   ${bold('Additional options')}
-    ${yellow(`--open`)}, ${yellow(`-o`)}        Open the generated CSV file.
+    ${yellow(`--open`)}, ${yellow(`-o`)}        Open the generated CSV file ${dim('(Default: false)')}.
 
   ${bold('Helper options')}
     ${yellow(`--help`)}, ${yellow(`-h`)}        Print this help message.
-    ${yellow(`--version`)}, ${yellow(`-v`)}     Print the CLI version.`,
+    ${yellow(`--version`)}, ${yellow(`-v`)}     Print the CLI version.
+
+  ${bold.yellow('Note:')} Report CSV file will be saved in ${dim(join(process.cwd(), 'uses.csv'))}`,
   {
     booleanDefault: undefined,
     description: false,
@@ -82,7 +86,7 @@ const cli = meow(
     for (const file of fs.readdirSync(data)) {
       if (file.indexOf('actions.json') === -1) continue
 
-      const json = JSON.parse(fs.readFileSync(`./data/${file}`, 'utf8'))
+      const json = JSON.parse(fs.readFileSync(join(data, file), 'utf8'))
       actions.push(...json)
     }
 

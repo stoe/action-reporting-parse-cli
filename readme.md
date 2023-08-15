@@ -10,10 +10,13 @@
 $ npx @stoe/action-reporting-parse-cli [--options]
 ```
 
+> **Note**
+> Report CSV file will be saved in `current_directory/uses.csv`.
+
 ## Required options
 
 - `--config`, `-c` Path to config.yml file.
-- `--data`, `-d` Path to data directory.
+- `--data`, `-d` Path to data directory to lookup `*actions.json` files.
 
 ## Additional options
 
