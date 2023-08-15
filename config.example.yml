@@ -1,0 +1,8 @@
+# organizations to include in the report
+orgs: org1
+  org2
+  org3
+
+# organizations to exclude from the report
+exclude: org4
+  org5

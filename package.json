@@ -1,0 +1,60 @@
+{
+  "name": "@stoe/action-reporting-parse-cli",
+  "version": "0.0.0-development",
+  "type": "module",
+  "description": "CLI to report on GitHub Actions",
+  "keywords": [
+    "github-actions",
+    "reporting",
+    "cli"
+  ],
+  "author": {
+    "name": "Stefan Stölzle",
+    "email": "stefan@github.com",
+    "url": "https://github.com/stoe"
+  },
+  "license": "MIT",
+  "repository": "github:stoe/action-reporting-cli",
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "bin": {
+    "action-reporting-parse-cli": "./index.js"
+  },
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "license",
+    "readme.md"
+  ],
+  "scripts": {
+    "prepare": "husky install ./.github/husky",
+    "format": "npx prettier --config-precedence prefer-file --write . && eslint . --fix",
+    "pretest": "npx eslint-config-prettier .eslintrc.json",
+    "test": "eslint ."
+  },
+  "dependencies": {
+    "chalk": "^4.1.2, <6",
+    "js-yaml": "^4.1.0",
+    "meow": "^12.0.1",
+    "open": "^9.1.0"
+  },
+  "devDependencies": {
+    "@github/prettier-config": "^0.0.6",
+    "@octokit/openapi-types": "^18.0.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-github": "^4.9.2",
+    "husky": "^8.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./.github/husky/pre-commit",
+      "pre-push": "./.github/husky/pre-push"
+    }
+  },
+  "prettier": "@github/prettier-config"
+}
