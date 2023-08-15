@@ -14,7 +14,7 @@
     "url": "https://github.com/stoe"
   },
   "license": "MIT",
-  "repository": "github:stoe/action-reporting-cli",
+  "repository": "github:stoe/action-reporting-parse-cli",
   "engines": {
     "node": ">=16",
     "npm": ">=8"
