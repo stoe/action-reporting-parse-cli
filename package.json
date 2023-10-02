@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@github/prettier-config": "^0.0.6",
-    "@octokit/openapi-types": "^18.0.0",
+    "@octokit/openapi-types": "^19.0.0",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-github": "^4.9.2",
