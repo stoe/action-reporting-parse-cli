@@ -48,7 +48,7 @@
     "@octokit/openapi-types": "^22.2.0",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-github": "^4.9.2",
+    "eslint-plugin-github": "^5.0.1",
     "husky": "^9.0.7"
   },
   "husky": {
