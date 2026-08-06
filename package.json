@@ -1,6 +1,6 @@
 {
   "name": "@stoe/action-reporting-parse-cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "description": "CLI to parse https://github.com/stoe/action-reporting-cli reports",
   "keywords": [
